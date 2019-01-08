@@ -26,6 +26,11 @@ h4 {
     width: 500px;
 }
 
+#sprite {
+    top: 100px;
+    left: 100px;
+}
+
 #right-column {
     background-color: coral;
     float: left;
@@ -39,3 +44,6 @@ h4 {
     height: 7em;
 }
 
+button {
+    border-radius: 15px;
+}
