@@ -9,47 +9,74 @@
                 font-size: 1em;
                 color: black;
                 position: absolute;
+		margin: 0;
+		font-size; 16;
             }
 
-            h1 {
-                font-size: 2em;
-            }
-
-            h4 {
-                font-size: 1.2em;
-            }
+	    columnTitle {
+		font-weight: bold;
+		font-size: 12px;		
+	    }
 
             #header {
-                background-color: green;
+                background-color: rgba(99, 135, 97, .8);
                 text-align: left;
-                padding-left: 15px;
                 width: 700px;
-                height: 10em;
+                height: 60px;
             }
 
-            #image {
+	    #title {
+		width: 300px;
+		font-size: 18px;
+		font-weight: bolder;
+		position: absolute;
+		top: 0px;
+		left: 30px;
+	    }
+
+	    #middle {
+		position: relative;
+	    }
+
+            #images {
                 float: left;
                 width: 500px;
+		height: 500px;
             }
+	    
+	    #map {
+		position: relative;
+  		top: 0;
+  		left: 0;
+		z-index: 1;
+	    }
 
             #sprite {
-                top: 100px;
-                left: 100px;
+		position: absolute;
+                top: 160px;
+                left: 180px;
+		z-index: 2;
             }
 
-            #right-column {
-                background-color: coral;    
+            #rightColumn {
+                background-color: rgba(255, 122, 135, .5);  
                 text-align: center;
                 float: left;
                 width: 200px;
-                height: 500pz
+                height: 500px;
             }
 
+	    #awesome {
+		font-size: 13px;
+	    }
+
             #footer {
-                background-color: rgb(204, 204, 0);  
+                background-color: rgba(133, 133, 4, .7);  
                 text-align: center;
                 width: 700px;
-                height: 7em;
+                height: 45px;
+		font-weight: bold;
+		float: left;
             }
             
             button {
@@ -60,24 +87,26 @@
     <body>
         <div id = "wrapper">
             <div id="header">
-                <h1>Grand Hawaiian Tour</h1>
+                <p id="title" >Grand Hawaiian Tour</p>
             </div>
+            
+	    <div id="middle">
+                <div id="images">
+                    <image src="images/map.jpg" alt="map of town" id="map"></image>
+                    <image src="images/sprite.png" alt="image of a sprite" id="sprite"></image>
+                </div>
           
-            <div id="image">
-                <image src="images/map.jpg" alt="map of town" id="map"></image>
-                <image src="images/sprite.jpg" alt="map of town" id="sprite"></image>
-            </div>
-          
-            <div id="rightColumn">
-                <h4>Column 'o buttons</h4>
-                <p>This is an awesome game!</p>
-                <button name="play">Click to play</button>
-                <br />
-                <button name="quit">Toss in the towel</button>
-            </div>
+                <div id="rightColumn">
+                    <p id="columnTitle"><strong>Column 'o buttons</strong></p>
+                    <p id="awesome">This is an awesome game!</p>
+                    <button name="play">Click to play</button>
+                    <br />
+                    <button name="quit">Toss in the towel</button>
+                </div>
+	    </div>
           
             <div id="footer">
-                Copyright &copy; Game Demons
+                <div id="copy">Copyright &copy; BC Game Demons</div>
             </div>
         </div>
     </body
